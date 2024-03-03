@@ -5,7 +5,7 @@ function userInfo (){
     var ID = "ID";
     
     localStorage.setItem(ID, id01);
-    
+
     if(id02 === id01) {
         window.location.href='accueil.html';
     }
@@ -33,4 +33,3 @@ function userInfo (){
            modal.style.display = "none";
        }
    }
-

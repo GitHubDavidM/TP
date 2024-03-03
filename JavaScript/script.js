@@ -106,3 +106,37 @@ clearAll.addEventListener("click", () => {
     localStorage.clear()
 })
 }
+
+const filterAllBtn = document.getElementById("filterAll");
+const filterDoneBtn = document.getElementById("filterDone");
+const filterUndoneBtn = document.getElementById("filterUndone");
+
+filterAllBtn.addEventListener("click", () => {
+    showAllTasks();
+});
+
+filterDoneBtn.addEventListener("click", () => {
+    showFilteredTasks("taskDone");
+});
+
+filterUndoneBtn.addEventListener("click", () => {
+    showFilteredTasks("undone task");
+});
+
+function showAllTasks() {
+    // Afficher toutes les tâches
+    const tasks = document.querySelectorAll("li");
+    tasks.forEach(task => task.style.display = "block");
+}
+
+function showFilteredTasks(filter) {
+    // Afficher uniquement les tâches correspondant au filtre
+    const tasks = document.querySelectorAll("li");
+    tasks.forEach(task => {
+        if (task.textContent.includes(filter)) {
+            task.style.display = "block";
+        } else {
+            task.style.display = "none";
+        }
+    });
+}
