@@ -1,16 +1,14 @@
 ////////////////// Obtenez le modal d'inscription ///////////////////////
 function userInfo (){
-    const id01 = document.getElementById('id01');
-    const id02 = document.getElementById('id02');
+    const id01 = document.getElementById('id01').value;
+    const id02 = document.getElementById('id02').value;
+    var ID = "ID";
     
+    localStorage.setItem(ID, id01);
     
-    if(id01 == id02) {
-
+    if(id02 === id01) {
+        window.location.href='accueil.html';
     }
-
-
-    // Todo
-    document.location='accueil.html';
   }
   
   
