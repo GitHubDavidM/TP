@@ -1,5 +1,12 @@
 ////////////////// Obtenez le modal d'inscription ///////////////////////
 function userInfo (){
+    const id01 = document.getElementById('id01');
+    const id02 = document.getElementById('id02');
+
+    if(id01 == id02) {
+
+    }
+
 
     // Todo
     document.location='accueil.html';
@@ -27,3 +34,4 @@ function userInfo (){
            modal.style.display = "none";
        }
    }
+
